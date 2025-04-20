@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+.container-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 1400px;
+    padding: 20px 10px;
+    margin: 0 60px 35px;
+    overflow: hidden;
+    position: relative;
+    height: fit-content;
+}
+
+.wrapper .card {
+    height: 409px;
+    width: 238px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #b1b1b3b2;
+    transition: transform 0.3s ease;
+}
+
+
+.card .card-image {
+    position: relative;
+}
+
+.card .card-image img {
+    width: 222px;
+    height: 222px;
+    /* padding: 10px; */
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+.card .card-image .card-tag {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    background: #00264E;
+}
+
+.card .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 15px 15px;
+}
+
+.card .card-content .card-text {
+    color: #747474;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.card .card-content .price {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.card .card-content .price div {
+    width: fit-content;
+}
+
+.card .card-content .price>div h3 {
+    color: #303030;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+.card .card-content .price>div h2 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card .card-content .price>h3 {
+    width: fit-content;
+    height: fit-content;
+    background: #5EC0BE;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.card .card-content .parcelas {
+    width: fit-content;
+    height: fit-content;
+}
+
+.card .card-content .parcelas p {
+    font-size: 12px;
+    color: #000;
+}
+
+.card .card-content .card-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: auto;
+    justify-content: space-between;
+}
+
+.card .card-footer .card-button {
+    width: 222px;
+    height: 40px;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    background: #005cff;
+    transition: all 0.3s ease;
+}
+
+.card .card-footer .card-button:hover {
+    background: #00399b;
+}
+
+.wrapper .swiper-pagination-bullet {
+    height: 7px;
+    width: 7px;
+    overflow: hidden;
+    opacity: 1;
+    background: #838383;
+}
+
+.wrapper .swiper-pagination-bullet-active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #303030;
+    transform: scaleX(1);
+}
+
+.container-slider:hover .wrapper .swiper-pagination-bullet-active::before {
+    animation-play-state: paused;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    z-index: 1;
+}
+
+.swiper-button-prev {
+    left: 10px;
+
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev::after {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background-image: url('../images/icones/blue-arrow.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    border: 2px solid #005cff;
+    border-radius: 25px;
+    rotate: 180deg;
+    width: 30px;
+    height: 30px;
+    color: #FFFFFF00;
+}
+
+.swiper-button-prev.swiper-button-disabled::after {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background-image: url('../images/icones/blue-arrow.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px 20px;
+    background-position: center;
+    border: 2px solid #005cff;
+    border-radius: 25px;
+    width: 30px !important;
+    height: 30px !important;
+    color: #FFFFFF00 !important;
+}
+.swiper-button-prev:hover::after {
+    border-radius: 15px;
+    background-image: url('../images/icones/white-arrow.png') !important;
+    background-color: #005cff;
+    background-position: center;
+
+}
+.swiper-button-prev.swiper-button-disabled:hover::after{
+    border-radius: 15px;
+    background-image: url('../images/icones/white-arrow.png') !important;
+    background-position: center;
+    background-color: #005cff;
+}
+
+.swiper-button-next::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/icones/blue-arrow.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    border: 2px solid #005cff;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    color: #FFFFFF00;
+}
+
+.swiper-button-next.swiper-button-disabled::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/icones/blue-arrow.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px 20px;
+    background-position: center;
+    border: 2px solid #005cff;
+    border-radius: 25px;
+    width: 30px !important;
+    height: 30px !important;
+    color: #FFFFFF00 !important;
+}
+.swiper-button-next:hover::after {
+    background-image: url('../images/icones/white-arrow.png') !important;
+    background-position: center;
+    background-color: #005cff;
+
+}
+
+.swiper-button-next.swiper-button-disabled:hover::after {
+    background-image: url('../images/icones/white-arrow.png') !important;
+    background-position: center;
+    background-color: #005cff;
+
+}
+
+@keyframes autoplay-loading {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        margin: 0 10px 25px;
+        max-width: 280px;
+
+    }
+
+    .wrapper :where(.swiper-button-prev, .swiper-button-next) {
+        display: none;
+    }
+    
+}
