@@ -17,8 +17,8 @@
 }
 
 .wrapper .card {
-    height: 409px;
-    width: 238px;
+    height: auto;
+    width: 222px;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -30,6 +30,8 @@
 
 .card .card-image {
     position: relative;
+    width: 222px;
+    align-self: center;
 }
 
 .card .card-image img {
